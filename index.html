@@ -2,11 +2,15 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Rdio - Luke Chesser</title>
-
+		<!-- CSS only -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+		<!-- JavaScript Bundle with Popper -->
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="css/reset.css"/>
 		<link rel="stylesheet" href="css/global.css"/>
 	</head>
-	<body>
+	<body class = "container row">
 		<header>
 			<div class="wrapper">
 				<div class="logo-search">
@@ -14,15 +18,21 @@
 				</div>
 
 				<form method="POST" action="index.html">
-					<input type="search" required class="search">
+					<input type="search" required class="search d-none d-sm-block">
 					<input type="submit" name="submit" value="Rechercher" class="submit">
 				</form>
 				<div class="user">
-				    <a href="#">Luke Chesser</a>
+					<div class="dropdown">
+						<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Luke Chesser</a>
+						<div class="dropdown-menu">
+							<a href="#" class="dropdown-item">Edit Profile</a>
+							<a href="#" class="dropdown-item">Logout</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</header>
-		<aside>
+		<aside class ="col-2 d-none d-lg-block">
 			<h3>Browse</h3>
 			<nav class="browse">
 				<ul class="main">
@@ -41,7 +51,7 @@
 			</nav>
 		</aside>
 
-		<main>
+		<main class ="col-10">
 			<header>
 				<div class="name-photo">
 					<aside>
